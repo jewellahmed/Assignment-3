@@ -1,3 +1,4 @@
+//https://github.com/jewellahmed/Assignment-3
 
 function kilometerToMeter(kilometer) {
 
@@ -6,8 +7,6 @@ function kilometerToMeter(kilometer) {
         return meter;
     
 }
-var result = kilometerToMeter(3);
-console.log(result);
 
 
 
