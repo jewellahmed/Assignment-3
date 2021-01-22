@@ -1,11 +1,29 @@
 
 function kilometerToMeter(kilometer) {
 
-        var meter = kilometer * 1000;//1 kilometer=1000 meters
+        if (kilometer<0)
+        {
+            return "Distance cann't be negative";
+        }
 
-        return meter;
+        else if (kilometer == 0){
+
+            return "No distance";
+
+        }
+
+        else {
+            var meter = kilometer * 1000;//1 kilometer=1000 meters
+
+            return meter; 
+        }
     
 }
+
+var mtr = kilometerToMeter(0);
+console.log(mtr)
+
+
 
 
 
@@ -14,24 +32,39 @@ function kilometerToMeter(kilometer) {
 
 //x=number of watch,y=number of mobile,z=number of laptop
 function budgetCalculator(x,y,z) {
-        
-        var watchCost = 50 * x ;//cost-per-watch=50
 
-        var mobileCost = 100 * y ;//cost-per-mobile=100
+        if (x>0 && y>0 && z>0)
+        {
 
-        var laptopCost = 500 * z ;//cost-per-laptop=500
+          var watchCost = 50 * x ;//cost-per-watch=50
 
-        var totalCost = watchCost + mobileCost + laptopCost ;
+          var mobileCost = 100 * y ;//cost-per-mobile=100
 
-        return totalCost ;  
+          var laptopCost = 500 * z ;//cost-per-laptop=500
+
+          var totalCost = watchCost + mobileCost + laptopCost ;
+
+          return totalCost ;  
+
+        }
+
+        else{
+
+           return "Number of goods must be greater than zero";
+        }
 }
-
+var cst = budgetCalculator(0,3,2);
+console.log(cst);
 
 
 
 
 //duration = total day's in hotel
 function hotelCost(duration) {
+
+ if (duration>0)
+
+    {
 
     var totalCost = 0 ;//set initial value
 
@@ -40,7 +73,7 @@ function hotelCost(duration) {
         totalCost = duration * 100 ;//first 10 day's rent = 100$
 
     }
-    else if(duration <= 20){
+    else if (duration <= 20) {
 
         var firstPart = 10 * 100 ;//first 10 day's rent = 100$
 
@@ -49,9 +82,9 @@ function hotelCost(duration) {
         var secondPart = remaining * 80 ;//second 10 day's rent = 80$
 
         totalCost = firstPart + secondPart ;
-
     }
-    else{
+
+  else {
 
         var firstPart = 10 * 100 ;//first 10 day's rent = 100$
 
@@ -65,6 +98,12 @@ function hotelCost(duration) {
     }
 
         return totalCost;
+    }
+    
+    else {
+
+        return "Duration must be greater than zero";
+    }
 
 }
 
@@ -73,9 +112,12 @@ function hotelCost(duration) {
 //array=["some","different","names"]
 function megaFriend(array) {
 
-    var longest = array[0];//set initial value
+    if(array.length>0) {
 
-    for(let i = 0;i < array.length;i++){
+
+       var longest = array[0];//set initial value
+
+       for(let i = 0;i < array.length;i++){
 
         const element = array[i];
 
@@ -86,5 +128,15 @@ function megaFriend(array) {
             }
                  }
 
+
                 return longest;
-                    }
+                 
+
+
+    }
+    
+    else {
+
+        return "Array must have at least one element";
+     }
+}     
