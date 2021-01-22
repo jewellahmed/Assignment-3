@@ -1,4 +1,3 @@
-//https://github.com/jewellahmed/Assignment-3
 
 function kilometerToMeter(kilometer) {
 
@@ -12,7 +11,8 @@ function kilometerToMeter(kilometer) {
 
 
 
-//x=number of watches,y=number of mobiles,z=number of laptops
+
+//x=number of watch,y=number of mobile,z=number of laptop
 function budgetCalculator(x,y,z) {
         
         var watchCost = 50 * x ;//cost-per-watch=50
@@ -33,7 +33,8 @@ function budgetCalculator(x,y,z) {
 //duration = total day's in hotel
 function hotelCost(duration) {
 
-    var totalCost = 0 ;
+    var totalCost = 0 ;//set initial value
+
     if(duration <= 10){
 
         totalCost = duration * 100 ;//first 10 day's rent = 100$
