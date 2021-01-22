@@ -20,12 +20,6 @@ function kilometerToMeter(kilometer) {
     
 }
 
-var mtr = kilometerToMeter(0);
-console.log(mtr)
-
-
-
-
 
 
 
@@ -53,8 +47,6 @@ function budgetCalculator(x,y,z) {
            return "Number of goods must be greater than zero";
         }
 }
-var cst = budgetCalculator(0,3,2);
-console.log(cst);
 
 
 
@@ -127,16 +119,13 @@ function megaFriend(array) {
 
             }
                  }
-
-
-                return longest;
-                 
-
+                
+                    return longest;
 
     }
     
     else {
 
-        return "Array must have at least one element";
+        return "Array must have at least a element";
      }
 }     
